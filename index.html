@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta property="og:image" content="anteprima1.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+
+  <title>Vesper Winter's Days</title>
+  <style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000;
+  background: url('background.jpeg') center center no-repeat; /* Imposta l'immagine di sfondo e il suo posizionamento */
+  background-size: cover; /* Copri completamente l'area senza deformare l'immagine */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh; /* Altezza del viewport */
+  width: 100%; /* Larghezza del viewport */
+  margin-top: 0px; /* Ridotto il margine dalla parte superiore */
+  margin-bottom: 0; /* Nessun margine nella parte inferiore */
+  overflow: hidden; /* Impedisce lo scrolling oltre il container */
+  background: url('background.jpg') center center no-repeat;
+  background-size: cover;
+   
+}
+
+
+
+
+.header {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 150px; /* Ridotto il margine dalla parte superiore */
+  
+}
+
+.card {
+  width: 192px;
+  height: 252px;
+  perspective: 1000px;
+  margin-top: 10px;
+
+}
+
+
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+	  
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+	  border-radius: 10px;
+	    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .card-front, .card-back {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+	    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+	
+	#centeredButton {
+	        
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+		
+		#centeredButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none; /* Colore del bordo */
+  background-color: #d81000; /* Colore di sfondo */
+  color: #ffffff; /* Colore del testo */
+  border-radius: 50px; /* Bordi arrotondati */
+  margin-top: 40px; /* Distanza dalla card */
+  display: block; /* Per centrare il pulsante */
+  margin-left: auto; /* Per centrare il pulsante */
+  margin-right: auto; /* Per centrare il pulsante */
+    font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+	
+}
+
+
+	
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2>GIRA LA CARTA</h2>
+    </div>
+
+    <div class="card" onclick="flipCard()">
+      <div class="card-inner">
+        <div class="card-face card-front" style="background-image: url('card1.png');"></div>
+        <div class="card-face card-back" id="cardBack"></div>
+      </div>
+      <button id="centeredButton" onclick="buttonClick()">CONDIVIDI</button>
+    </div>
+  </div>
+
+</body>
+
+  <script>
+    function flipCard() {
+      var card = document.querySelector('.card');
+      card.classList.toggle('flipped');
+    }
+
+    function updateCardBack() {
+      var currentDate = new Date();
+      var currentDay = currentDate.getDate();
+      var currentMonth = currentDate.getMonth() + 1; // Aggiungi 1 al risultato di getMonth()
+
+      // Aggiungi qui le condizioni per ogni giorno e mese di dicembre
+      if (currentMonth === 11) {
+        if (currentDay === 30) {
+          document.getElementById('cardBack').style.backgroundImage = "url('1.png')";
+        } else if (currentDay === 2) {
+          document.getElementById('cardBack').style.backgroundImage = "url('2.png')";
+        } else if (currentDay === 3) {
+          document.getElementById('cardBack').style.backgroundImage = "url('3.png')";
+        } else if (currentDay === 29) {
+          document.getElementById('cardBack').style.backgroundImage = "url('4.png')";
+        } else if (currentDay === 5) {
+          document.getElementById('cardBack').style.backgroundImage = "url('5.png')";
+        } else if (currentDay === 6) {
+          document.getElementById('cardBack').style.backgroundImage = "url('6.png')";
+        } else if (currentDay === 7) {
+          document.getElementById('cardBack').style.backgroundImage = "url('7.png')";
+        } else if (currentDay === 8) {
+          document.getElementById('cardBack').style.backgroundImage = "url('8.png')";
+        } else if (currentDay === 9) {
+          document.getElementById('cardBack').style.backgroundImage = "url('9.png')";
+        } else if (currentDay === 10) {
+          document.getElementById('cardBack').style.backgroundImage = "url('10.png')";
+        } else if (currentDay === 11) {
+          document.getElementById('cardBack').style.backgroundImage = "url('11.png')";
+        } else if (currentDay === 12) {
+          document.getElementById('cardBack').style.backgroundImage = "url('12.png')";
+        } else if (currentDay === 13) {
+          document.getElementById('cardBack').style.backgroundImage = "url('13.png')";
+        } else if (currentDay === 14) {
+          document.getElementById('cardBack').style.backgroundImage = "url('14.png')";
+        } else if (currentDay === 15) {
+          document.getElementById('cardBack').style.backgroundImage = "url('15.png')";
+        } else if (currentDay === 16) {
+          document.getElementById('cardBack').style.backgroundImage = "url('16.png')";
+        } else if (currentDay === 17) {
+          document.getElementById('cardBack').style.backgroundImage = "url('17.png')";
+        } else if (currentDay === 18) {
+          document.getElementById('cardBack').style.backgroundImage = "url('18.png')";
+        } else if (currentDay === 19) {
+          document.getElementById('cardBack').style.backgroundImage = "url('19.png')";
+        } else if (currentDay === 20) {
+          document.getElementById('cardBack').style.backgroundImage = "url('20.png')";
+        } else if (currentDay === 21) {
+          document.getElementById('cardBack').style.backgroundImage = "url('21.png')";
+        } else if (currentDay === 22) {
+          document.getElementById('cardBack').style.backgroundImage = "url('22.png')";
+        } else if (currentDay === 23) {
+          document.getElementById('cardBack').style.backgroundImage = "url('23.png')";
+        } else if (currentDay === 24) {
+          document.getElementById('cardBack').style.backgroundImage = "url('24.png')";
+        } else if (currentDay === 25) {
+          document.getElementById('cardBack').style.backgroundImage = "url('25.png')";
+        }
+      }
+      // Puoi estendere questo blocco di condizioni per coprire altri mesi, se necessario
+    }
+
+    // Aggiorna il retro della carta quando la pagina si carica
+ updateCardBack();
+	
+function buttonClick() {
+            // Verifica se il browser supporta l'API di condivisione
+            if (navigator.share) {
+                // Ottieni l'URL corrente
+                var currentUrl = window.location.href;
+
+                // Utilizza l'API di condivisione per condividere l'URL
+                navigator.share({
+                    title: document.title,
+                    url: currentUrl
+                }).then(() => {
+                    console.log('URL condiviso con successo!');
+                }).catch((error) => {
+                    console.error('Errore durante la condivisione:', error);
+                });
+            } else {
+                // Fallback nel caso in cui l'API di condivisione non sia supportata
+                alert("Spiacenti, la condivisione non è supportata dal tuo browser.");
+            }
+        }
+
+		
+  </script>
+</body>
+</html>
