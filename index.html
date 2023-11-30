@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 
 
-  <title>Vesper Winter's Days</title>
+  <title>Corner Winter's Days</title>
   <style>
 body {
   display: flex;
@@ -115,7 +115,23 @@ body {
 	
 }
 
-
+.menubutton {
+  padding: 10px 0px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none; /* Colore del bordo */
+  background-color: #d81000; /* Colore di sfondo */
+  color: #ffffff; /* Colore del testo */
+  border-radius: 50px; /* Bordi arrotondati */
+  margin-top: 10px; /* Distanza dalla card */
+  display: block; /* Per centrare il pulsante */
+  margin-left: auto; /* Per centrare il pulsante */
+  margin-right: auto; /* Per centrare il pulsante */
+    font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+   text-align: center;
+	
+}
 	
   </style>
 </head>
@@ -132,6 +148,7 @@ body {
         <div class="card-face card-back" id="cardBack"></div>
       </div>
       <button id="centeredButton" onclick="buttonClick()">CONDIVIDI</button>
+	 <a href="https://www.menudigitale.io/fzsmf?fbclid=PAAab6WnyuD77UT0HSycp1i_twoH3hlUITtEEuzabOpSQStSinmBsIMpfQUQs" target="_blank" class="menubutton">MENU</a>
     </div>
   </div>
 
@@ -149,14 +166,14 @@ body {
       var currentMonth = currentDate.getMonth() + 1; // Aggiungi 1 al risultato di getMonth()
 
       // Aggiungi qui le condizioni per ogni giorno e mese di dicembre
-      if (currentMonth === 11) {
-        if (currentDay === 30) {
+      if (currentMonth === 12) {
+        if (currentDay === 1) {
           document.getElementById('cardBack').style.backgroundImage = "url('1.png')";
         } else if (currentDay === 2) {
           document.getElementById('cardBack').style.backgroundImage = "url('2.png')";
         } else if (currentDay === 3) {
           document.getElementById('cardBack').style.backgroundImage = "url('3.png')";
-        } else if (currentDay === 29) {
+        } else if (currentDay === 4) {
           document.getElementById('cardBack').style.backgroundImage = "url('4.png')";
         } else if (currentDay === 5) {
           document.getElementById('cardBack').style.backgroundImage = "url('5.png')";
